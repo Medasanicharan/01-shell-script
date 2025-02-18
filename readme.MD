@@ -4,8 +4,17 @@
 * created repo in console
 * clone the repo
 * add the files to temp area
+'''
+git add <file-name>
+'''
 * commit the changes
+'''
+git commit -m "message"
+'''
 * push the changes to GITHUB/central repo
+'''
+git push -u origin main
+'''
 
 ## GIT AUTHENTICAION: ##
 
