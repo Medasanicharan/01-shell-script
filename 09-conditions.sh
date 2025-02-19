@@ -11,7 +11,7 @@ fi
 
 # -gt(greaterthan), -lt(lessthan), -eq(equal), -ge(greaterthan equal to), -le(lessthan equal to)
 
-if [ $NUMBER -lt 20 ]
+if [ $NUMBER -eq 20 ]
 then
     echo "given number $NUMBER is greater than 20"
 else
