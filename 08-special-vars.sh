@@ -11,3 +11,4 @@ echo "Process ID of the current shell script: $$"
 # sleep 60 
 sleep 60 &
 echo "process ID of last background command: $!"
+echo "to check exit status: $?"
