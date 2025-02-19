@@ -1,3 +1,3 @@
 #!/bin/bash
 
-dnf install mysql -y
+dnf uninstall mysql -y
