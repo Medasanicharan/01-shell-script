@@ -19,4 +19,4 @@ else
     echo "installaton of mysql is sucess"
 fi
 
-dnf install git -y
+dnf install gitt -y
