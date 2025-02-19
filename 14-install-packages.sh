@@ -29,5 +29,5 @@ do
     dnf "list installed $i" &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
-        echo "$i already installed...SKIPING $N"
+        echo "$i already installed...$Y SKIPING $N"
 done
