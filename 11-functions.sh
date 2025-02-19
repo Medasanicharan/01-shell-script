@@ -1,9 +1,8 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
-SCRIPT_NAME=$($0 | cut -d "." -f1)
 TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$($0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 if [ $USERID -ne 0 ]
