@@ -33,8 +33,5 @@ VALIDATE(){
 dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing mysql"
 
-dnf install git -y &>>$LOGFILE
-VALIDATE $? "Installing git"
-
 dnf install docker -y &>>$LOGFILE
 VALIDATE $? "Installig Docker"
