@@ -52,7 +52,7 @@ for i in $@
 do 
     echo "package to remove: $i"
     dnf list removed $i &>>$LOGFILE
-    if [ $? -eq 0 ]
+    if [ $? -ne 0 ]
     then 
         echo -e "$i already removed...$Y SKIPING $N"
     else
