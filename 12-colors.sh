@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-TIMESTAMP=$(echo date +%F-%H-%M-%S) # TIMESTAMP=$(date +%F-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S) # TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/"$SCRIPT_NAME-$TIMESTAMP".log # LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 R="\e[31m"
@@ -25,7 +25,7 @@ VALIDATE(){
         echo -e "$2...$R failure $N"
         exit 1
     else
-        echo -e "$2...$R success $N"
+        echo -e "$2...$G success $N"
         
     fi
 }
