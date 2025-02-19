@@ -8,6 +8,7 @@ LOGFILE=/tmp/"$SCRIPT_NAME-$TIMESTAMP".log # LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAM
 
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 echo "script started executing at : $TIMESTAMP"
@@ -24,5 +25,9 @@ fi
 
 for i in $@
 do 
-    echo "package to install: $i"
+    echo "package to install: $i" &>>$LOGFILE
+    dnf "list installed $i" &>>$LOGFILE
+    if [ $? -eq 0 ]
+    then 
+        echo "$i already installed...SKIPING $N"
 done
