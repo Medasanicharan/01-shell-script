@@ -30,11 +30,11 @@ VALIDATE(){
     fi
 }
 
-dnf install mysql -y &>>$LOGFILE
-VALIDATE $? "Installig mysql"
+dnf remove mysql -y &>>$LOGFILE
+VALIDATE $? "removing mysql"
 
-dnf install git -y &>>$LOGFILE
-VALIDATE $? "Installig git"
+dnf remove git -y &>>$LOGFILE
+VALIDATE $? "removing git"
 
 dnf install dockerr -y &>>$LOGFILE
 VALIDATE $? "Installig Docker"
