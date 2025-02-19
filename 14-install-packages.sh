@@ -30,4 +30,5 @@ do
     if [ $? -eq 0 ]
     then 
         echo "$i already installed...$Y SKIPING $N"
+    fi
 done
