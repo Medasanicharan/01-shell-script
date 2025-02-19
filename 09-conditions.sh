@@ -17,3 +17,10 @@ then
 else
     echo "given number $NUMBER is not equal to 20"
 fi
+
+if [ $NUMBER -lt 30 ]
+then
+    echo "given number $NUMBER is less than  30"
+else
+    echo "given number $NUMBER is greater than 30"
+fi
