@@ -9,4 +9,4 @@ else
     echo "you are super user"
 fi
 
-dnf uninstall mysql -y
+dnf install mysql -y
