@@ -35,15 +35,28 @@ VALIDATE(){
 
 # echo "all packages: $@"
 
+# for i in $@
+# do 
+#     echo "package to install: $i"
+#     dnf list installed $i &>>$LOGFILE
+#     if [ $? -eq 0 ]
+#     then 
+#         echo -e "$i already installed...$Y SKIPING $N"
+#     else
+#         dnf install $i -y &>>$LOGFILE
+#         VALIDATE $? "installation of $i"
+#     fi
+# done
+
 for i in $@
 do 
-    echo "package to install: $i"
-    dnf list installed $i &>>$LOGFILE
+    echo "package to remove: $i"
+    dnf list removed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
-        echo -e "$i already installed...$Y SKIPING $N"
+        echo -e "$i already removed...$Y SKIPING $N"
     else
         dnf remove $i -y &>>$LOGFILE
-        VALIDATE $? "installation of $i"
+        VALIDATE $? " remove $i"
     fi
 done
