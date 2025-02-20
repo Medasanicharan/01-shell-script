@@ -3,11 +3,7 @@
 set -e
 
 failure(){
-then
     echo "Failed at $1: $2"
-else
-    echo "SUCCESS"
-fi
 }
 
 trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
