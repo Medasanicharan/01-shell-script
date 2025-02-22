@@ -16,7 +16,8 @@ else
     exit 1
 fi
 
-files=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +00)
+#files=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +00)
+files=$(find $SOURCE_DIRECTORY -name "script-1.java")
 
 echo "files to delete: $files" 
 
