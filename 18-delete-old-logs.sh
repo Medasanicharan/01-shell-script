@@ -1,0 +1,3 @@
+#!/bn/bash
+
+SOURCE_DIRECTORY=
