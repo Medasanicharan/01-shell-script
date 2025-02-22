@@ -1,6 +1,6 @@
 #!/bn/bash
 
-SOURCE_DIRECTORY=/tmp/app-logss
+SOURCE_DIRECTORY=/tmp/app-logs
 
 R="\e[31m"
 G="\e[32m"
@@ -15,3 +15,7 @@ else
     echo -e "$R Please make sure $SOURCE_DIRECTORY exits $N"
     exit 1
 fi
+
+files=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +00)
+
+echo "files to delete: $files"
